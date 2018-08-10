@@ -1,0 +1,13 @@
+<h1> Bienvenue sur notre app de films, </h1>
+
+<p>Tape le nom du film qui t'interesse:
+<%= form_tag 'movie', method: "post" do %>
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>
+    <input type="text" name="title" placeholder="Titre">
+  </p>
+  <p>
+    <input type="submit" value="Rechercher">
+  </p>
+<% end %>
+</p>
